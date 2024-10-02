@@ -1,9 +1,5 @@
-/* Given an array of strings strs, group the 
-anagrams
- together. You can return the answer in any order.
-
+/* Given an array of strings strs, group the anagrams together. You can return the answer in any order.
  Example 1:
-
 Input: strs = ["eat","tea","tan","ate","nat","bat"]
 
 Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
@@ -25,7 +21,7 @@ var groupAnagrams = function(strs){
             anagramsMap.get(sortedStr).push(str);//push in already presented array-find adress using get and push in same
         }else{
             // Otherwise, create a new key with the original string in a list
-            anagramsMap.set(sortedStr,[str]);
+            anagramsMap.set(sortedStr,[str]);//aading value in array helps us to add multiple values in same array
         }
     }
     return Array.from(anagramsMap.values());//Array.from creates an array from iterable object

@@ -59,7 +59,7 @@ var maxSubArrayUsingKadanes = function(nums){
 
     for(let i=1; i<nums.length; i++){
         // Update currentSum: either add the current element or start fresh from current element
-        currentSum = Math.max(nums[i],currentSum + nums[i]);
+        currentSum = Math.max(nums[i],currentSum + nums[i]);//we taking the only nums[i] cause, adding the numbers making lowering the value  due to negative price 
 
         // Update maxSum if currentSum is greater
         maxSum = Math.max(currentSum,maxSum);

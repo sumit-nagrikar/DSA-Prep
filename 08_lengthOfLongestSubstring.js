@@ -19,21 +19,20 @@
   console.log(longestSubstringWithoutRepeatingChars("abcdbcbb"));
  */
   //optimised solution //length of
-  function longestSubstringWithoutRepeatingChars(str) {
-    let longest = 0;
-    let start = 0;
-    let charMap = new Map();
-    for (let end = 0; end < str.length; end++) {
-      if (charMap.has(str[end])) {
-        start = Math.max(start, charMap.get(str[end]) + 1);
-      }
-      charMap.set(str[end], end);
-      let substring = str.slice(start, end + 1);
-      if (substring.length > longest.length) {
-        longest = substring.length;
-      }
+  var lengthOfLongestSubstring = function(s) {
+    let charSet = new Set();//to store passing charaters with their occured index
+    let left = 0, maxLength = 0;//left to delete duplicates and right for iteration
+
+    for (let right = 0; right < s.length; right++) {
+        while (charSet.has(s[right])) {
+            charSet.delete(s[left]);
+            left++;
+        }
+        charSet.add(s[right]);
+        maxLength = Math.max(maxLength, right - left + 1);
     }
-    return longest;
-  }
+
+    return maxLength;
+};
   
-  console.log(longestSubstringWithoutRepeatingChars("abcdbcbb"));
+  ;

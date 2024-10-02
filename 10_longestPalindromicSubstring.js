@@ -37,7 +37,7 @@ function longestPalindrome(str) {
             right++;// Move right pointer outward
         }
         // Return the palindrome substring found
-        return str.slice(left + 1, right);
+        return str.slice(left + 1, right);//When the loop breaks, left is pointing to the index before the palindrome started, and right is pointing to the index after the palindrome ends.
     }
 
     let longest = '';
@@ -59,5 +59,5 @@ function longestPalindrome(str) {
     return longest;
 }
 
-let s = "babad";
+let s = "babbababcd";
 console.log(longestPalindrome(s));

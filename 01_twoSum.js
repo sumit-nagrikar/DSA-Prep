@@ -19,9 +19,9 @@ var twoSum = function(nums, target) {
 
 function twoSum(target,nums){
     let map = {}// Hash map to store value and index
-
-    for(let i=0; i<nums.length; i++){
-        let complement = target - nums[i]
+    
+    for(let i=0; i<nums.length; i++){//Iterate on array
+        let complement = target - nums[i] //find complement
 
         // Check if the complement is in the map
         if(map[complement] !== undefined){
