@@ -12,7 +12,7 @@ class LinkedList {
         this.head = null;
     }
 
-    // Method to add a new node to the linked list
+      
     append(data) {
         const newNode = new Node(data);  // Create a new node with the given data
         
