@@ -34,5 +34,5 @@ var coinChange = function(amount, coins) {
 
 // Example Usage:
 let amount = 11;
-let coins = [2, 5, 7];  // Available coin denominations
+let coins = [1,2,5];  // Available coin denominations
 console.log(coinChange(amount, coins));  // Output: 3 (7 + 2 + 2)

@@ -23,6 +23,40 @@ let string = 'madam';
 console.log(validPalindrome(string)); 
 console.log(validPalindrome("race")); 
 
+
+var isPalindrome = function(s) {
+    let left = 0;
+    let right = s.length - 1;
+
+    while (left < right) {
+        // Move left pointer if it's not alphanumeric
+        while (left < right && !isAlphanumeric(s[left])) {
+            left++;
+        }
+        // Move right pointer if it's not alphanumeric
+        while (left < right && !isAlphanumeric(s[right])) {
+            right--;
+        }
+        
+        // Compare characters at left and right pointers (case insensitive)
+        if (s[left].toLowerCase() !== s[right].toLowerCase()) {
+            return false;
+        }
+        
+        // Move both pointers inward
+        left++;
+        right--;
+    }
+
+    return true;
+};
+
+// Helper function to check if a character is alphanumeric
+function isAlphanumeric(char) {
+    return /^[a-z0-9]$/i.test(char);  // Regular expression to match alphanumeric characters
+}
+
+
 /* Time Complexity (TC)
 Normalization:
 

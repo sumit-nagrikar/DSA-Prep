@@ -6,7 +6,7 @@
         if (substring.includes(str[j])) {
           break;//exits from loop
         }
-        substring += str[j];
+        substring += str[j];  
       }
       //update the longest string
       if (substring.length > longest.length) {
@@ -25,12 +25,12 @@
 
     for (let right = 0; right < s.length; right++) {
         while (charSet.has(s[right])) {
-            charSet.delete(s[left]);
+            charSet.delete(s[left]);//ek char repeat yet asel tr ek char delete krtoy , we just need length
             left++;
         }
         charSet.add(s[right]);
-        maxLength = Math.max(maxLength, right - left + 1);
-    }
+        maxLength = Math.max(maxLength, right - left + 1);//0 to 4 jayenge to length 5 aayegi thats why +1
+    }                                            //adding left/means deleting an extra element from maxlength
 
     return maxLength;
 };
