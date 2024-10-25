@@ -8,7 +8,14 @@ Explanation:
 
 There is no string in strs that can be rearranged to form "bat".
 The strings "nat" and "tan" are anagrams as they can be rearranged to form each other.
-The strings "ate", "eat", and "tea" are anagrams as they can be rearranged to form each other. */
+The strings "ate", "eat", and "tea" are anagrams as they can be rearranged to form each other.
+
+Approach:
+create a map for storings anagrams
+Iterate through each str frrom strs
+sort it to compare it with previous once
+if it matches push it into same array inside map
+return array from map*/
 
 var groupAnagrams = function(strs){
     let anagramsMap = new Map(); // for storing anagrams
