@@ -54,7 +54,7 @@ RandomizedSet.prototype.insert = function(val) {
  */
 RandomizedSet.prototype.remove = function(val) {
     if(!this.map.has(val)) return false;
-    const index = this.map.get(val);
+    const index = this.map.get(val);//index bhetla
     const lastElement = this.list[this.list.length -1];
     this.list[index] = lastElement;
 
