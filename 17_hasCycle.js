@@ -4,7 +4,7 @@ var hasCycle = function(head){
     if(!head || !head.next){
         return false;
     }
-    //slow initialized ti first node and fast to second node of list
+    //slow initialized to first node and fast to second node of list
     let slow = head;
     let fast = head.next;
 
@@ -13,7 +13,7 @@ var hasCycle = function(head){
             return  false;
         }
         slow = slow.next;//move one step at a time
-        fast = fast.next;//move two step at a time
+        fast = fast.next.next;//move two step at a time
     }
     return true;
 }

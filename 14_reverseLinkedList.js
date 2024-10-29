@@ -60,7 +60,7 @@ list.reverse();
 list.printList(); */
 
 var reverseList = function(head){
-    // initialize prev and next pointers to NULL
+    // initialize prev and next pointers to NULL 1 2 3 4
     let prev = null;
     let next = null;
      // set current pointer to the head node
